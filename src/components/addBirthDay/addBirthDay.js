@@ -40,7 +40,7 @@ function AddBirthDay() {
     //     setData(response)
     // }
 
-    const removeItem= async(id)=>{
+    const removeItem= (id)=>{
         const newData = data.filter((info)=>info.id!==id)
         setData(newData)
         // const res = await fetch(`${url}/${id}`,{
