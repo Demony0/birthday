@@ -1,7 +1,7 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 import './addBirthday.css'
 
-const url =  'http://localhost:5000/reminders'
+// const url =  'http://localhost:5000/reminders'
 function AddBirthDay() {
     const [id,setId] = useState(new Date().getTime().toString())
     const [data,setData] = useState([])
@@ -20,38 +20,38 @@ function AddBirthDay() {
         if(userInput.firstName && userInput.date){
             setData([...data,userInput])
             setUserInput({firstName:'',date:'',id:id})
-            addDatabase()
+            // addDatabase()
         }
     }
 
-    const addDatabase = async()=>{
-        await fetch(url,{
-            method:'POST',
-            headers:{
-                'Content-type': 'application/json',
-            },
-            body:JSON.stringify(userInput)
-        }) 
-    }
+    // const addDatabase = async()=>{
+    //     await fetch(url,{
+    //         method:'POST',
+    //         headers:{
+    //             'Content-type': 'application/json',
+    //         },
+    //         body:JSON.stringify(userInput)
+    //     }) 
+    // }
 
-    const database = async () =>{
-        const res = await fetch(url)
-        const response = await res.json()
-        setData(response)
-    }
+    // const database = async () =>{
+    //     const res = await fetch(url)
+    //     const response = await res.json()
+    //     setData(response)
+    // }
 
     const removeItem= async(id)=>{
         const newData = data.filter((info)=>info.id!==id)
         setData(newData)
-        const res = await fetch(`${url}/${id}`,{
-            method:'DELETE'
-        })
-        res.status === 200 ? database() : window.alert('DELETED')
+        // const res = await fetch(`${url}/${id}`,{
+        //     method:'DELETE'
+        // })
+        // res.status === 200 ? database() : window.alert('DELETED')
     }
 
-    useEffect(()=>{
-        database()
-    },[])
+    // useEffect(()=>{
+    //     database()
+    // },[])
 
     
     const UpdateBirthday =()=> {
