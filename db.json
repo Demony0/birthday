@@ -1,0 +1,19 @@
+{
+  "reminders": [
+    {
+      "firstName": "john de",
+      "date": "2022-01-01",
+      "id": "1628325344705"
+    },
+    {
+      "firstName": "client Sin",
+      "date": "2021-07-08",
+      "id": "1628325368814"
+    },
+    {
+      "firstName": "Johnny Sin",
+      "date": "2021-08-07",
+      "id": "1628325390809"
+    }
+  ]
+}

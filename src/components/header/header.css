@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+.header-container{
+    background-color: rgb(245, 10, 127);
+    height:10vh; width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header-container h2{
+    color:#fff;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.header-container div{
+    background:rgb(66, 8, 8);
+    height: 3px;
+    width:50%;
+}
